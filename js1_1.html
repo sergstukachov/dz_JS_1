@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy cost</title>
+</head>
+<body>
+
+</body>
+
+<script> let consuption = prompt('enter electricity consaption per month' , 'kilowatt');  //запрос на ввод расхода электроенергии
+var costUpTo100kW = 0.9;   // стоимость до 100 кВт,за 1 кВт
+var costOver100kW = 1.68;  //стоимость более 100 кВт,за 1 кВт
+if(consuption > 100){           // определение оплаты за месяц исходя из расхода эл.енергии
+    var result = (consuption - 100) * 1.68 + (100 * 0.9);
+} else {
+    var result = (consuption * 0.9)
+}
+alert('Payable '+ result +' hryven')  // вывод суммы которую необходимо оплатить </script>
+</html>
