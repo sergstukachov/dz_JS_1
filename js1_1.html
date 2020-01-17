@@ -11,7 +11,7 @@
 <script> let consuption = prompt('enter electricity consaption per month "kilowatt"' , '');  //запрос на ввод расхода электроенергии
 var costUpTo100kW = 0.9;   // стоимость до 100 кВт,за 1 кВт
 var costOver100kW = 1.68;  //стоимость более 100 кВт,за 1 кВт
-if(consuption > 100){           // определение оплаты за месяц исходя из расхода эл.енергии
+if(consuption >= 100){           // определение оплаты за месяц исходя из расхода эл.енергии
     var result = (consuption - 100) * costOver100kW + (100 * costUpTo100kW);
 } else {
     var result = (consuption * costUpTo100kW)
